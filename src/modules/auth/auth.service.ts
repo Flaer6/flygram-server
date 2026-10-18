@@ -79,7 +79,6 @@ export class AuthService {
         email: true,
         password: true,
         username: true,
-        publicId: true,
         role: true,
         // isEmailVerified: true,
       },

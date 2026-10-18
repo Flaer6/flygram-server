@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import cookieParser from 'cookie-parser';
-import { AppModule } from './core/core.module.js';
+import { AppModule } from './core/core.module';
 import { getAllowedOrigins } from './lib/utils/allowedOrigins.js';
 
 async function bootstrap() {
