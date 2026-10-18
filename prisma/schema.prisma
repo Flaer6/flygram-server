@@ -9,7 +9,18 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id            String   @id @default(cuid())
+  username      String
+  usernameLower String   @unique
+  email         String   @unique
+  firstName     String?  @map("first_name")
+  lastName      String?  @map("last_name")
+  password      String
+  role          UserRole @default(REGULAR)
+  avatar        String?
+}
+
+enum UserRole {
+  REGULAR
+  ADMIN
 }
